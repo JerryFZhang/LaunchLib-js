@@ -1,0 +1,19 @@
+{
+  "name": "launchjs",
+  "version": "0.0.1",
+  "description": "Unofficial Wrapper for https://launchlibrary.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerryFZhang/LaunchJS.git"
+  },
+  "author": "JerryFZhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JerryFZhang/LaunchJS/issues"
+  },
+  "homepage": "https://github.com/JerryFZhang/LaunchJS#readme"
+}
