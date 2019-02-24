@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JerryFZhang/LaunchJS/issues"
   },
-  "homepage": "https://github.com/JerryFZhang/LaunchJS#readme"
+  "homepage": "https://github.com/JerryFZhang/LaunchJS#readme",
+  "dependencies": {
+    "req": "^0.1.4"
+  }
 }
