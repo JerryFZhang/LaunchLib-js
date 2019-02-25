@@ -1,5 +1,5 @@
 {
-  "name": "launchjs",
+  "name": "launchlib-js",
   "version": "0.0.2",
   "description": "Unofficial Wrapper for https://launchlibrary.net",
   "main": "index.js",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JerryFZhang/LaunchJS#readme",
   "dependencies": {
+    "moment": "^2.24.0",
     "req": "^0.1.4"
   }
 }
