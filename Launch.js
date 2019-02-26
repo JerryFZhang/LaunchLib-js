@@ -33,19 +33,19 @@ class LaunchJS {
         this._generateReqUrl(`agency?countryCode=`, param)
         break
 
-        // Agency Type
+      // Agency Type
       case `getAgencyTypeById`:
       case `getAgencyTypeByName`:
         this._generateReqUrl(`agencytype/`, param)
         break
 
-        // Event Type
+      // Event Type
       case `getEventTypeById`:
       case `getEventTypeByName`:
         this._generateReqUrl(`eventtype/`, param)
         break
 
-        // Launch
+      // Launch
       case `getLaunchById`:
       case `getLaunchByName`:
         this._generateReqUrl(`launch/`, param)
@@ -53,27 +53,27 @@ class LaunchJS {
       case `getLaunches`:
         this._generateReqUrl(`launch/`, param)
         break
-        // TODO parse date
+      // TODO parse date
       case `getLaunchesAfter`:
         this._generateReqUrl(`launch/`, param)
         break
-        // TODO parse date
+      // TODO parse date
       case `getLaunchesBetween`:
         param = '/' + param.startDate + '/' + param.endDate
         this._generateReqUrl(`launch/`, param)
         break
-        // Launch Event
+      // Launch Event
       case `getLaunchEventById`:
         this._generateReqUrl(`launchevent/`, param)
         break
 
-        // Launch Status
+      // Launch Status
       case `getLaunchStatusById`:
       case `getLaunchStatusByName`:
         this._generateReqUrl(`launchstatus/`, param)
         break
 
-        // location
+      // location
       case `getLocationById`:
       case `getLocationByName`:
         this._generateReqUrl(`location/`, param)
@@ -88,7 +88,7 @@ class LaunchJS {
         this._generateReqUrl(`mission/`, param)
         break
 
-        // Mission Event
+      // Mission Event
       case `getMissionEventById`:
         this._generateReqUrl(`missionevent/`, param)
         break
@@ -96,13 +96,13 @@ class LaunchJS {
         this._generateReqUrl(`missionevent?parentid=`, param)
         break
 
-        // Mission Type
+      // Mission Type
       case `getMissionTypeById`:
       case `getMissionTypeByName`:
         this._generateReqUrl(`missiontype/`, param)
         break
 
-        // Pad
+      // Pad
       case `getPadById`:
       case `getPadTypeByName`:
         this._generateReqUrl(`pad/`, param)
@@ -110,6 +110,7 @@ class LaunchJS {
       case `getPadTypeByLocationId`:
         this._generateReqUrl(`pad?locationid=`, param)
         break
+
         // Rocket
       case `getRocketById`:
       case `getRocketTypeByName`:
@@ -118,14 +119,16 @@ class LaunchJS {
       case `getRocketTypeByConfigName`:
         this._generateReqUrl(`rocket?name=`, param)
         break
-        // Rocket Event
+
+      // Rocket Event
       case `getRocketEventById`:
         this._generateReqUrl(`rocketevent/`, param)
         break
       case `getRocketEventByLaunchId`:
         this._generateReqUrl(`rocketevent?parentid=`, param)
         break
-        // Rocket Family
+
+      // Rocket Family
       case `getRocketFamilyById`:
         this._generateReqUrl(`rocketfamily/`, param)
         break
