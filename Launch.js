@@ -51,7 +51,7 @@ class LaunchJS {
         this._generateReqUrl(`launch/`, param)
         break
       case `getLaunches`:
-        this._generateReqUrl(`launch/`, param)
+        this._generateReqUrl(`launch/next/`, param)
         break
       // TODO parse date
       case `getLaunchesAfter`:
