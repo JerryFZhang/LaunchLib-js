@@ -139,15 +139,20 @@ class LaunchJS {
         json: true,
         timeout: this.timeoutVal
       }, (err, res, body) => {
+        console.log(err)
+        console.log(res.body)
+        console.log(body)
         if (err) {
           reject(new Error(`Launch data cannot be retrieved. ERROR: ${err}`))
           return
         }
         if (res.statusCode !== 200) {
+          console.log(res.statusCode)
           reject(new Error(`Launch data cannot be retrieved. Response: ${res.statusCode} ${res.statusMessage}`))
           return
         }
         resolve(body)
+        return
       })
     })
   }
