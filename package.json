@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JerryFZhang/LaunchJS.git"
+    "url": "git+https://github.com/JerryFZhang/LaunchLib-js.git"
   },
   "author": "JerryFZhang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JerryFZhang/LaunchJS/issues"
+    "url": "https://github.com/JerryFZhang/LaunchLib-js/issues"
   },
-  "homepage": "https://github.com/JerryFZhang/LaunchJS#readme",
+  "homepage": "https://github.com/JerryFZhang/LaunchLib-js#readme",
   "dependencies": {
     "moment": "^2.24.0",
     "req": "^0.1.4"
