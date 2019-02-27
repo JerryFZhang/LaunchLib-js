@@ -1,6 +1,6 @@
 {
   "name": "launchlib-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Unofficial Wrapper for https://launchlibrary.net",
   "main": "index.js",
   "scripts": {
