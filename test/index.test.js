@@ -5,20 +5,20 @@ const LaunchJS = new Launch()
 let chai = require('chai');
 let should = chai.should();
 
-it('should return an agency with getAgencyById', function (done) {
+it('should return the agency with an ID of 5 using getAgencyById', function (done) {
     const agency = LaunchJS.get('getAgencyById', '1');
     //console.log(agency)
     done()
 });
 
-it('should return an agency with getAgencyByAbbr', function (done) {
+it('should return the agency with an abbreviation of NASA using getAgencyByAbbr', function (done) {
     const agency = LaunchJS.get('getAgencyByAbbr', 'NASA');
     //console.log(agency)
     done()
 });
 
-it('should return an agency with getAgenciesByName', function (done) {
-    const agency = LaunchJS.get('getAgenciesByName', '1');
+it('should return the agency with a name matching "National" using getAgenciesByName', function (done) {
+    const agency = LaunchJS.get('getAgenciesByName', 'National');
     //console.log(agency)
     done()
 });
