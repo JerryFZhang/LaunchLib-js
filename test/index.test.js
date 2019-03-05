@@ -4,10 +4,14 @@ const LaunchJS = new Launch()
 
 let chai = require('chai');
 let should = chai.should();
+var expect = chai.expect;
 
 it('should return the agency with an ID of 5 using getAgencyById', function (done) {
-    const agency = LaunchJS.get('getAgencyById', '1');
-    //console.log(agency)
+    LaunchJS.get('getAgencyById', '1') .then( res => {
+        expect(res.agencies).to.be.a('array');
+        expect(res.agencies).to.have.lengthOf(1);
+        expect(res.agencies[0].id).to.equal(1);
+    })
     done()
 });
 
