@@ -26,12 +26,6 @@ class LaunchJS {
       case `getAgenciesByName`:
         this._generateReqUrl(`agency?name=`, param)
         break
-      case `getAgenciesByType`:
-        this._generateReqUrl(`agency?type=`, param)
-        break
-      case `getAgenciesByCountryCode`:
-        this._generateReqUrl(`agency?countryCode=`, param)
-        break
 
       // Agency Type
       case `getAgencyTypeById`:
