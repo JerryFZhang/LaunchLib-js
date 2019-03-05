@@ -35,32 +35,39 @@ it('should return an agency with getAgenciesByCountryCode', function (done) {
     done()
 });
 
-it('should return an agency with getAgencyTypeById', function (done) {
+it('should return the agency type with an ID of 1 using getAgencyTypeById', function (done) {
     const agency = LaunchJS.get('getAgencyTypeById', '1');
     //console.log(agency)
     done()
 });
-it('should return an agency with getEventTypeById', function (done) {
+
+it('should return the agency type with a name of government using getAgencyTypeByName', function (done) {
+    const agency = LaunchJS.get('getAgencyTypeByName', 'government');
+    //console.log(agency)
+    done()
+});
+
+it('should return the event type with an ID of 1 using getEventTypeById', function (done) {
     const agency = LaunchJS.get('getEventTypeById', '1');
     //console.log(agency)
     done()
 });
 
-it('should return an agency with getEventTypeByName', function (done) {
-    const agency = LaunchJS.get('getEventTypeByName', 'NASA');
+it('should return the event type with a name of info using getEventTypeByName', function (done) {
+    const agency = LaunchJS.get('getEventTypeByName', 'info');
     //console.log(agency)
     done()
 });
 
 
-it('should return an agency with getLaunchById', function (done) {
+it('should return the launch with an ID of 1 using getLaunchById', function (done) {
     const agency = LaunchJS.get('getLaunchById', '1');
     //console.log(agency)
     done()
 });
 
-it('should return an agency with getLaunchByName', function (done) {
-    const agency = LaunchJS.get('getLaunchByName', 'NASA');
+it('should return the launch with a name including Falcon using getLaunchByName', function (done) {
+    const agency = LaunchJS.get('getLaunchByName', 'falcon');
     //console.log(agency)
     done()
 });
