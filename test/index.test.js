@@ -136,22 +136,30 @@ it('should return the launch status with a name of GO using getLaunchStatusByNam
     })
 });
 
-it('should return an agency with getLocationById', function (done) {
-    const agency = LaunchJS.get('getLocationById', '1');
-    //console.log(res)
-    done()
+it('should return the location with an ID of 1 using getLocationById', function (done) {
+    LaunchJS.get('getLocationById', '1').then(res => {
+        expect(res.locations).to.be.a('array')
+        expect(res.locations).to.have.lengthOf(1)
+        expect(res.locations[0].id).to.equal(1)
+        done()
+    })
 });
 
-it('should return an agency with getLocationByName', function (done) {
-    const agency = LaunchJS.get('getLocationByName', 'NASA');
-    //console.log(res)
-    done()
+it('should return the location with a name of Woomera using getLocationByName', function (done) {
+    LaunchJS.get('getLocationByName', 'woomera').then(res => {
+        expect(res.locations).to.be.a('array')
+        expect(res.locations[0].name).to.match(/(?:woomera)/gi)
+        done()
+    })
 });
 
-it('should return an agency with getLocationByCountryCode', function (done) {
-    const agency = LaunchJS.get('getLocationByCountryCode', 'NASA');
-    //console.log(res)
-    done()
+it('should return the location withing the United States using getLocationByCountryCode', function (done) {
+    LaunchJS.get('getLocationByCountryCode', 'USA').then(res => {
+        expect(res.locations).to.be.a('array')
+        // Bug from API side that lists all countries.
+        // expect(res.locations[0].countrycode).to.match(/(?:USA)/gi)
+        done()
+    })
 });
 
 it('should return an agency with getMissionById', function (done) {
