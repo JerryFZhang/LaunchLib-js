@@ -70,7 +70,8 @@ The above call will return next 12 upcoming launches.
 
 ## License
 
-Moment.js is freely distributable under the terms of the [MIT license](https://github.com/moment/moment/blob/develop/LICENSE).
+
+LaunchLib-js is freely distributable under the terms of the [MIT license](https://github.com/moment/moment/blob/develop/LICENSE).
 
 
 
