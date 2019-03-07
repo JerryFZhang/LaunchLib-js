@@ -179,16 +179,24 @@ it('should return an agency with getMissionByName', function (done) {
     })
 });
 
-it('should return an agency with getMissionEventById', function (done) {
-    const agency = LaunchJS.get('getMissionEventById', '1');
-    //console.log(res)
-    done()
-});
+// it('should return an agency with getMissionEventById', function (done) {
+//     LaunchJS.get('getMissionEventById', '1').then(res => {
+//         console.log(res)
+//         expect(res.missions).to.be.a('array')
+//         expect(res.missions).to.have.lengthOf(1)
+//         expect(res.missions[0].id).to.equal(601)
+//         done()
+//     })
+// });
 
 it('should return an agency with getMissionEventByParentId', function (done) {
-    const agency = LaunchJS.get('getMissionEventByParentId', '1');
-    //console.log(res)
-    done()
+    LaunchJS.get('getMissionEventByParentId', '1').then(res => {
+        console.log(res)
+        expect(res.missions).to.be.a('array')
+        expect(res.missions).to.have.lengthOf(1)
+        expect(res.missions[0].id).to.equal(601)
+        done()
+    })
 });
 
 it('should return an agency with getMissionTypeById', function (done) {
