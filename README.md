@@ -30,7 +30,7 @@ LaunchLib.get('getLaunches', '12')
 
 The above call will return next 12 upcoming launches.
 
-### Supported Request Types and Parameters (total of 32)
+### Supported Request Types and Parameters (total of 33)
 - `getAgencyById`
 - `getAgencyByAbbr`
 - `getAgenciesByName`

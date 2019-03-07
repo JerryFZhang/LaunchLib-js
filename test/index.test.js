@@ -119,7 +119,7 @@ it('should return launches between August 20th, 2015 and September 20th, 2015 wi
 //     })
 // });
 
-it('should return the launc status with an ID of 1 using getLaunchStatusById', function (done) {
+it('should return the launch status with an ID of 1 using getLaunchStatusById', function (done) {
     LaunchJS.get('getLaunchStatusById', '1').then(res => {
         expect(res.types).to.be.a('array')
         expect(res.types).to.have.lengthOf(1)
@@ -162,7 +162,7 @@ it('should return the location withing the United States using getLocationByCoun
     })
 });
 
-it('should return an agency with getMissionById', function (done) {
+it('should return the mission with an ID of 1 using getMissionById', function (done) {
     LaunchJS.get('getMissionById', '601').then(res => {
         expect(res.missions).to.be.a('array')
         expect(res.missions).to.have.lengthOf(1)
@@ -171,15 +171,15 @@ it('should return an agency with getMissionById', function (done) {
     })
 });
 
-it('should return an agency with getMissionByName', function (done) {
-    LaunchJS.get('getMissionByName', 'NASA').then(res => {
+it('should return the mission with a name of GPS using s getMissionByName', function (done) {
+    LaunchJS.get('getMissionByName', 'GPS').then(res => {
         expect(res.missions).to.be.a('array')
-        expect(res.missions[0].name).to.match(/(?:NASA)/gi)
+        expect(res.missions[0].name).to.match(/(?:GPS)/gi)
         done()
     })
 });
 
-// it('should return an agency with getMissionEventById', function (done) {
+// it('should return the mission event with an ID of 1 using getMissionEventById', function (done) {
 //     LaunchJS.get('getMissionEventById', '1').then(res => {
 //         console.log(res)
 //         expect(res.missions).to.be.a('array')
@@ -189,78 +189,105 @@ it('should return an agency with getMissionByName', function (done) {
 //     })
 // });
 
-it('should return an agency with getMissionEventByParentId', function (done) {
-    LaunchJS.get('getMissionEventByParentId', '1').then(res => {
-        console.log(res)
-        expect(res.missions).to.be.a('array')
-        expect(res.missions).to.have.lengthOf(1)
-        expect(res.missions[0].id).to.equal(601)
+// it('should return the mission event with a mission id of 1 using getMissionEventByParentId', function (done) {
+//     LaunchJS.get('getMissionEventByParentId', '1').then(res => {
+//         // console.log(res)
+//         expect(res.missions).to.be.a('array')
+//         expect(res.missions).to.have.lengthOf(1)
+//         expect(res.missions[0].id).to.equal(601)
+//         done()
+//     })
+// });
+
+it('should return the mission type with an ID of 1 using getMissionTypeById', function (done) {
+    LaunchJS.get('getMissionTypeById', '1').then(res => {
+        expect(res.types).to.be.a('array')
+        expect(res.types).to.have.lengthOf(1)
+        expect(res.types[0].id).to.equal(1)
         done()
     })
 });
 
-it('should return an agency with getMissionTypeById', function (done) {
-    const agency = LaunchJS.get('getMissionTypeById', '1');
-    //console.log(res)
-    done()
+it('should return the mission type with a name of Earth Science using getMissionTypeByName', function (done) {
+    LaunchJS.get('getMissionTypeByName', 'Earth Science').then(res => {
+        expect(res.types).to.be.a('array')
+        expect(res.types[0].name).to.match(/(?:Earth Science)/gi)
+        done()
+    })
 });
 
-it('should return an agency with getMissionTypeByName', function (done) {
-    const agency = LaunchJS.get('getMissionTypeByName', 'NASA');
-    //console.log(res)
-    done()
+it('should return the pad with an ID of 1 using getPadById', function (done) {
+    LaunchJS.get('getPadById', '1').then(res => {
+        expect(res.pads).to.be.a('array')
+        expect(res.pads).to.have.lengthOf(1)
+        expect(res.pads[0].id).to.equal(1)
+        done()
+    })
 });
 
-it('should return an agency with getPadById', function (done) {
-    const agency = LaunchJS.get('getPadById', '1');
-    //console.log(res)
-    done()
+it('should return pads with a name containing launch complex using getPadTypeByName', function (done) {
+    LaunchJS.get('getPadTypeByName', 'launch complex').then(res => {
+        expect(res.pads).to.be.a('array')
+        expect(res.pads[0].name).to.match(/(?:launch complex)/gi)
+        done()
+    })
 });
 
-it('should return an agency with getPadTypeByName', function (done) {
-    const agency = LaunchJS.get('getPadTypeByName', 'NASA');
-    //console.log(res)
-    done()
+it('should return pads with a location ID of 1 using getPadTypeByLocationId', function (done) {
+    LaunchJS.get('getPadTypeByLocationId', '1').then(res => {
+        expect(res.pads).to.be.a('array')
+        expect(res.pads[0].locationid).to.equal(1)
+        done()
+    })
 });
 
-it('should return an agency with getPadTypeByLocationId', function (done) {
-    const agency = LaunchJS.get('getPadTypeByLocationId', '1');
-    //console.log(res)
-    done()
+it('should return the rocket with an ID of 1 using getRocketById', function (done) {
+    LaunchJS.get('getRocketById', '1').then(res => {
+        expect(res.rockets).to.be.a('array')
+        expect(res.rockets).to.have.lengthOf(1)
+        expect(res.rockets[0].id).to.equal(1)
+        done()
+    })
 });
 
-it('should return an agency with getRocketById', function (done) {
-    const agency = LaunchJS.get('getRocketById', '1');
-    //console.log(res)
-    done()
+it('should return the rocket with a name containing Falcon using getRocketTypeByName', function (done) {
+    LaunchJS.get('getRocketTypeByName', 'falcon').then(res => {
+        expect(res.rockets).to.be.a('array')
+        expect(res.rockets[0].name).to.match(/(?:falcon)/gi)
+        done()
+    })
 });
 
-it('should return an agency with getRocketTypeByName', function (done) {
-    const agency = LaunchJS.get('getRocketTypeByName', 'NASA');
-    //console.log(res)
-    done()
+it('should  return the rockets with configuration containing v1.1 using getRocketTypeByConfigName', function (done) {
+    LaunchJS.get('getRocketTypeByConfigName', 'v1.1').then(res => {
+        expect(res.rockets).to.be.a('array')
+        expect(res.rockets[0].name).to.match(/(?:v1.1)/gi)
+        done()
+    })
 });
 
-it('should return an agency with getRocketTypeByConfigName', function (done) {
-    const agency = LaunchJS.get('getRocketTypeByConfigName', 'NASA');
-    //console.log(res)
-    done()
+it('should return the rocket event with an ID of 10 using getRocketEventById', function (done) {
+    LaunchJS.get('getRocketEventById', '10').then(res => {
+        expect(res).to.be.a('array')
+        expect(res).to.have.lengthOf(1)
+        expect(res[0].id).to.equal(10)
+        done()
+    })
 });
 
-it('should return an agency with getRocketEventById', function (done) {
-    const agency = LaunchJS.get('getRocketEventById', '1');
-    //console.log(res)
-    done()
-});
-
-it('should return an agency with getRocketEventByLaunchId', function (done) {
+it('should return the launch event with a launch id of 1 using getRocketEventByLaunchId', function (done) {
     const agency = LaunchJS.get('getRocketEventByLaunchId', '1');
-    //console.log(res)
-    done()
+    LaunchJS.get('getRocketEventByLaunchId', '1').then(res => {
+        expect(res).to.be.a('array')
+        done()
+    })
 });
 
-it('should return an agency with getRocketFamilyById', function (done) {
-    const agency = LaunchJS.get('getRocketFamilyById', '1');
-    //console.log(res)
-    done()
+it('should return the rocket family with an ID of 1 using getRocketFamilyById', function (done) {
+    LaunchJS.get('getRocketFamilyById', '1').then(res => {
+        expect(res.RocketFamilies).to.be.a('array')
+        expect(res.RocketFamilies).to.have.lengthOf(1)
+        expect(res.RocketFamilies[0].id).to.equal(1)
+        done()
+    })
 });
