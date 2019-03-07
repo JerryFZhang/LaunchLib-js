@@ -163,15 +163,20 @@ it('should return the location withing the United States using getLocationByCoun
 });
 
 it('should return an agency with getMissionById', function (done) {
-    const agency = LaunchJS.get('getMissionById', '1');
-    //console.log(res)
-    done()
+    LaunchJS.get('getMissionById', '601').then(res => {
+        expect(res.missions).to.be.a('array')
+        expect(res.missions).to.have.lengthOf(1)
+        expect(res.missions[0].id).to.equal(601)
+        done()
+    })
 });
 
 it('should return an agency with getMissionByName', function (done) {
-    const agency = LaunchJS.get('getMissionByName', 'NASA');
-    //console.log(res)
-    done()
+    LaunchJS.get('getMissionByName', 'NASA').then(res => {
+        expect(res.missions).to.be.a('array')
+        expect(res.missions[0].name).to.match(/(?:NASA)/gi)
+        done()
+    })
 });
 
 it('should return an agency with getMissionEventById', function (done) {
