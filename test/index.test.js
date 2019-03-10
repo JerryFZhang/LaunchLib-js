@@ -187,7 +187,7 @@ it('should return the mission with a name of GPS using s getMissionByName', func
         done()
     })
 });
-
+// Mission Event
 // it('should return the mission event with an ID of 1 using getMissionEventById', function (done) {
 //     LaunchLib.get('getMissionEventById', '1').then(data => {
 //         console.log(data)
@@ -208,6 +208,7 @@ it('should return the mission with a name of GPS using s getMissionByName', func
 //     })
 // });
 
+// Mission Type
 it('should return the mission type with an ID of 1 using getMissionTypeById', function (done) {
     LaunchLib.get('getMissionTypeById', '1').then(data => {
         expect(data.types).to.be.a('array')
@@ -225,6 +226,7 @@ it('should return the mission type with a name of Earth Science using getMission
     })
 });
 
+// Pad
 it('should return the pad with an ID of 1 using getPadById', function (done) {
     LaunchLib.get('getPadById', '1').then(data => {
         expect(data.pads).to.be.a('array')
@@ -250,6 +252,7 @@ it('should return pads with a location ID of 1 using getPadTypeByLocationId', fu
     })
 });
 
+// Rocket Event
 it('should return the rocket with an ID of 1 using getRocketById', function (done) {
     LaunchLib.get('getRocketById', '1').then(data => {
         expect(data.rockets).to.be.a('array')
@@ -284,6 +287,7 @@ it('should return the rocket event with an ID of 10 using getRocketEventById', f
     })
 });
 
+// Rocket Family
 it('should return the launch event with a launch id of 1 using getRocketEventByLaunchId', function (done) {
     LaunchLib.get('getRocketEventByLaunchId', '1').then(data => {
         expect(data).to.be.a('array')
