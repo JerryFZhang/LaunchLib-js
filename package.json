@@ -4,7 +4,7 @@
   "description": "Unofficial Wrapper for https://launchlibrary.net",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": " mocha test/index.test.js"
   },
   "repository": {
     "type": "git",
