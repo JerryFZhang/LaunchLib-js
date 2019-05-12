@@ -4,6 +4,7 @@ const moment = require('moment')
 class LaunchJS {
   constructor () {
     this.timeoutVal = 20000
+    this.version = '1.4'
     // added different types of requests parameters for more functionality
   }
 
@@ -12,8 +13,12 @@ class LaunchJS {
     return this
   }
 
+  _setVersion(version){
+    (version) ? this.version = version : this.version = '1.4'
+  }
+
   _generateReqUrl (reqType, param) {
-    (param && reqType) ? this.url = `https://launchlibrary.net/1.4/` + reqType + param : this.url = ``
+    (param && reqType) ? this.url = `https://launchlibrary.net/${this.version}/${reqType}${param}` : this.url = ``
   }
 
   get (reqType, param) {
@@ -145,6 +150,7 @@ class LaunchJS {
       })
     })
   }
+  
 }
 
 module.exports = LaunchJS
