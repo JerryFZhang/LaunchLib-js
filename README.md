@@ -1,9 +1,17 @@
 # LaunchLib-js
 [![NPM version][npm-version-image]][npm-url] 
-[![NPM downloads][npm-downloads-image]][downloads-url] 
+[![NPM downloads][npm-downloads-image]][downloads-url]
 [![MIT License][license-image]][license-url]
 [![Travis](https://api.travis-ci.org/JerryFZhang/LaunchLib-js.svg)](https://travis-ci.org/JerryFZhang/LaunchLib-js) 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/beb89b404293452bbc98bc6c65829fdb)](https://www.codacy.com/manual/jerry.fengwei/LaunchLib-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JerryFZhang/LaunchLib-js&amp;utm_campaign=Badge_Grade)
+[![Dependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js) 
+[![devDependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js/dev-status.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js#info=devDependencies) 
+[![Coverage Status](https://coveralls.io/repos/github/JerryFZhang/LaunchLib-js/badge.svg?branch=master)](https://coveralls.io/github/JerryFZhang/LaunchLib-js?branch=master) 
+![License](https://img.shields.io/badge/license-MIT-lightgray.svg)
+
+[![Travis](https://api.travis-ci.org/JerryFZhang/LaunchLib-js.svg)](https://travis-ci.org/JerryFZhang/LaunchLib-js) 
+
+[![Codacy Badge](https://www.codacy.com/project/badge/172621abbd81457d84ee5df6ebe13f91)](https://www.codacy.com/app/JerryFZhang/LaunchLib-js) 
 [![Dependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js) 
 [![devDependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js/dev-status.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js#info=devDependencies) 
 [![Coverage Status](https://coveralls.io/repos/github/JerryFZhang/LaunchLib-js/badge.svg?branch=master)](https://coveralls.io/github/JerryFZhang/LaunchLib-js?branch=master) 

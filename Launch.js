@@ -2,26 +2,26 @@ const req = require('request')
 const moment = require('moment')
 
 class LaunchJS {
-  constructor () {
+  constructor() {
     this.timeoutVal = 20000
-    this.version = '1.4'
+    this.version = '1.4.1'
     // added different types of requests parameters for more functionality
   }
 
-  timeout (milliseconds) {
-    (milliseconds) ? this.timeoutVal = milliseconds : this.timeoutVal = null
+  timeout(milliseconds) {
+    (milliseconds) ? this.timeoutVal = milliseconds: this.timeoutVal = null
     return this
   }
 
-  _setVersion(version){
-    (version) ? this.version = version : this.version = '1.4'
+  _setVersion(version) {
+    (version) ? this.version = version: this.version = '1.4.1'
   }
 
-  _generateReqUrl (reqType, param) {
-    (param && reqType) ? this.url = `https://launchlibrary.net/${this.version}/${reqType}${param}` : this.url = ``
+  _generateReqUrl(reqType, param) {
+    (param && reqType) ? this.url = `https://launchlibrary.net/${this.version}/${reqType}${param}`: this.url = ``
   }
 
-  get (reqType, param) {
+  get(reqType, param) {
     switch (reqType) {
       // Agency
       case `getAgencyById`:
@@ -32,19 +32,19 @@ class LaunchJS {
         this._generateReqUrl(`agency?name=`, param)
         break
 
-      // Agency Type
+        // Agency Type
       case `getAgencyTypeById`:
       case `getAgencyTypeByName`:
         this._generateReqUrl(`agencytype/`, param)
         break
 
-      // Event Type
+        // Event Type
       case `getEventTypeById`:
       case `getEventTypeByName`:
         this._generateReqUrl(`eventtype/`, param)
         break
 
-      // Launch
+        // Launch
       case `getLaunchById`:
       case `getLaunchByName`:
         this._generateReqUrl(`launch/`, param)
@@ -52,7 +52,7 @@ class LaunchJS {
       case `getLaunches`:
         this._generateReqUrl(`launch/next/`, param)
         break
-    
+
       case `getLaunchesAfter`:
         this._generateReqUrl(`launch/`, moment(param).format('YYYY-MM-DD'))
         break
@@ -60,18 +60,18 @@ class LaunchJS {
         param = '/' + moment(param.startDate).format('YYYY-MM-DD') + '/' + moment(param.endDate).format('YYYY-MM-DD')
         this._generateReqUrl(`launch/`, param)
         break
-      // Launch Event
+        // Launch Event
       case `getLaunchEventById`:
         this._generateReqUrl(`launchevent/`, param)
         break
 
-      // Launch Status
+        // Launch Status
       case `getLaunchStatusById`:
       case `getLaunchStatusByName`:
         this._generateReqUrl(`launchstatus/`, param)
         break
 
-      // location
+        // location
       case `getLocationById`:
       case `getLocationByName`:
         this._generateReqUrl(`location/`, param)
@@ -86,7 +86,7 @@ class LaunchJS {
         this._generateReqUrl(`mission/`, param)
         break
 
-      // Mission Event
+        // Mission Event
       case `getMissionEventById`:
         this._generateReqUrl(`missionevent/`, param)
         break
@@ -94,13 +94,13 @@ class LaunchJS {
         this._generateReqUrl(`missionevent?parentid=`, param)
         break
 
-      // Mission Type
+        // Mission Type
       case `getMissionTypeById`:
       case `getMissionTypeByName`:
         this._generateReqUrl(`missiontype/`, param)
         break
 
-      // Pad
+        // Pad
       case `getPadById`:
       case `getPadTypeByName`:
         this._generateReqUrl(`pad/`, param)
@@ -118,7 +118,7 @@ class LaunchJS {
         this._generateReqUrl(`rocket?name=`, param)
         break
 
-      // Rocket Event
+        // Rocket Event
       case `getRocketEventById`:
         this._generateReqUrl(`rocketevent/`, param)
         break
@@ -126,7 +126,7 @@ class LaunchJS {
         this._generateReqUrl(`rocketevent?parentid=`, param)
         break
 
-      // Rocket Family
+        // Rocket Family
       case `getRocketFamilyById`:
         this._generateReqUrl(`rocketfamily/`, param)
         break
@@ -150,7 +150,7 @@ class LaunchJS {
       })
     })
   }
-  
+
 }
 
 module.exports = LaunchJS
