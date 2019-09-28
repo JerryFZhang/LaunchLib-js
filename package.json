@@ -4,7 +4,7 @@
   "description": "Unofficial Wrapper for https://launchlibrary.net",
   "main": "index.js",
   "scripts": {
-    "test": " mocha test/index.test.js"
+    "test": "nyc mocha test/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
   }
 }
