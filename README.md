@@ -9,14 +9,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/JerryFZhang/LaunchLib-js/badge.svg?branch=master)](https://coveralls.io/github/JerryFZhang/LaunchLib-js?branch=master) 
 ![License](https://img.shields.io/badge/license-MIT-lightgray.svg)
 
-[![Travis](https://api.travis-ci.org/JerryFZhang/LaunchLib-js.svg)](https://travis-ci.org/JerryFZhang/LaunchLib-js) 
-
-[![Codacy Badge](https://www.codacy.com/project/badge/172621abbd81457d84ee5df6ebe13f91)](https://www.codacy.com/app/JerryFZhang/LaunchLib-js) 
-[![Dependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js) 
-[![devDependency Status](https://david-dm.org/JerryFZhang/LaunchLib-js/dev-status.svg)](https://david-dm.org/JerryFZhang/LaunchLib-js#info=devDependencies) 
-[![Coverage Status](https://coveralls.io/repos/github/JerryFZhang/LaunchLib-js/badge.svg?branch=master)](https://coveralls.io/github/JerryFZhang/LaunchLib-js?branch=master) 
-![License](https://img.shields.io/badge/license-MIT-lightgray.svg)
-
 Unofficial NPM package for wrapping Launch Library (https://launchlibrary.net)
 
 ## Usage
